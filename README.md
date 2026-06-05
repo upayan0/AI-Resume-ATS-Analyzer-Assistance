@@ -199,6 +199,39 @@ https://github.com/user-attachments/assets/0766e641-bd86-45d1-b931-3f7d310f368b
 
 ```
 
+
+---
+
+# 📝 AI Resume Transformation
+
+The system automatically rewrites resumes to improve ATS compatibility and recruiter readability.
+
+<div align="center">
+
+### AI-Optimized Resume
+
+<img width="652" height="872" alt="image" src="https://github.com/user-attachments/assets/49274393-5574-4795-b04b-e3d204d64040" />
+
+
+</div>
+
+### Improvements Achieved
+
+✅ ATS Keyword Enhancement
+
+✅ Better Project Presentation
+
+✅ Stronger Impact Statements
+
+✅ Improved Resume Structure
+
+✅ Higher Recruiter Readability
+
+✅ Job-Specific Customizations
+
+---
+
+
 # 🧠 Core Technologies
 
 | Category               | Technology                 |
