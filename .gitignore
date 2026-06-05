@@ -1,0 +1,52 @@
+# ==========================================
+# 🔑 PRIVATE API SECRETS & KEYS
+# ==========================================
+# Prevent your live cloud connection keys from ever leaking to public spaces
+.env
+
+# ==========================================
+# 💾 LOCAL STORAGE & PERSISTENT DATA LOGS
+# ==========================================
+# Ignore the local transactional relational SQLite history records
+database/
+*.db
+
+# Ignore the compiled FAISS spatial calculation matrix database index states
+rag/faiss_index.bin
+rag/faiss_metadata.pkl
+
+# ==========================================
+# 🖨️ SYSTEM-GENERATED COMPILATION EXPORTS
+# ==========================================
+# Prevent dynamically compiled candidate audit PDFs or rewritten profiles from being tracked
+outputs/
+*.pdf
+
+# ==========================================
+# 📦 VIRTUAL ENVIRONMENTS & PY_CACHE INFRASTRUCTURE
+# ==========================================
+# Python workspace isolated deployment module allocations
+venv/
+.venv/
+env/
+ENV/
+
+# Python execution binary metadata tracking allocations
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# ==========================================
+# 🖥️ OPERATING SYSTEM SPECIFIC METADATA
+# ==========================================
+# Windows system file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS system folder preferences metadata files
+.DS_Store
+.AppleDouble
+.LSOverride
