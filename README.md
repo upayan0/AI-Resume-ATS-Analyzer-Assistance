@@ -15,8 +15,8 @@ An enterprise-grade, asymmetric Retrieval-Augmented Generation (RAG) agentic pip
 > 💡 **Engineering Reviewers & Recruiters:** Watch the core architectural execution sequence, real-time context fetching loops, and downstream compilation actions in real time:
 
 ```mermaid
-%% System Walkthrough Timeline
-graph LR
+ %% System Walkthrough Timeline
+ graph LR
     A[1. Multi-Input Ingestion] --> B[2. Dense Vector Extraction] --> C[3. Resilient Failover Generation] --> D[4. ReportLab PDF Export]
 
 🎬 System Walkthrough Video
