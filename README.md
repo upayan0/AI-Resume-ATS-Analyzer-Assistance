@@ -12,15 +12,17 @@ An enterprise-grade, asymmetric Retrieval-Augmented Generation (RAG) agentic pip
 
 ## 📺 Live Video Demonstration & Interface Walkthrough
 
+## 📺 Live Video Demonstration & Interface Walkthrough
+
 > 💡 **Engineering Reviewers & Recruiters:** Watch the core architectural execution sequence, real-time context fetching loops, and downstream compilation actions in real time:
 
 ```mermaid
- %% System Walkthrough Timeline
- graph LR
+%% System Walkthrough Timeline
+graph LR
     A[1. Multi-Input Ingestion] --> B[2. Dense Vector Extraction] --> C[3. Resilient Failover Generation] --> D[4. ReportLab PDF Export]
 
 🎬 System Walkthrough Video
-https://github.com/UpayanChatterjee/AI-Resume-ATS-Analyzer-Assistance/assets/demo-video.mp4
+{}
 
 📂 To preview your live workspace video stream, record a short clip of your application in action, drag-and-drop the .mp4 into your GitHub repository root, and match its path reference to the link above.
 
