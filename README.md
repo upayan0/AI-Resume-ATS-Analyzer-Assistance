@@ -192,9 +192,12 @@ Watch the complete workflow including:
 
 ```
 
-```
 
----
+https://github.com/user-attachments/assets/0766e641-bd86-45d1-b931-3f7d310f368b
+
+
+
+```
 
 # 🧠 Core Technologies
 
