@@ -1,145 +1,425 @@
 # 💼 Enterprise AI Resume ATS Analyzer & Placement Hub
 
-[![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Streamlit-1.45.1-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Vector Engine](https://img.shields.io/badge/FAISS-CPU%201.11.0-004A7F?style=for-the-badge&logo=databricks&logoColor=white)](https://github.com/facebookresearch/faiss)
-[![Primary LLM](https://img.shields.io/badge/Gemini%202.5-Flash-0066FF?style=for-the-badge&logo=google-gemini&logoColor=white)](https://ai.google.dev/)
-[![Failover Core](https://img.shields.io/badge/Groq-Llama%203.3-F55036?style=for-the-badge&logo=meta&logoColor=white)](https://groq.com/)
+<div align="center">
 
-An enterprise-grade, asymmetric Retrieval-Augmented Generation (RAG) agentic pipeline engineered to reverse-engineer Application Tracking System (ATS) matching patterns. By coupling **Gemini 2.5 Flash** structured json-schema emission with a local dense vector proximity space managed by **FAISS**, this hub transforms unstructured resume data into actionable career metrics, custom interview simulations, and pristine application components.
+![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.45.1-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)
+![FAISS](https://img.shields.io/badge/FAISS-CPU%201.11.0-004A7F?style=for-the-badge\&logo=databricks\&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini%202.5%20Flash-0066FF?style=for-the-badge\&logo=google-gemini\&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-Llama%203.3-F55036?style=for-the-badge\&logo=meta\&logoColor=white)
+
+### AI-Powered ATS Analysis, Resume Optimization, Interview Preparation & Placement Assistance Platform
+
+*Built using Retrieval-Augmented Generation (RAG), FAISS Semantic Search, Gemini 2.5 Flash, Groq Llama 3.3, Streamlit, SQLite, and ReportLab.*
+
+</div>
 
 ---
 
-## 📺 Live Video Demonstration & Interface Walkthrough
+# 📌 Overview
 
-> 💡 **Engineering Reviewers & Recruiters:** Watch the core architectural execution sequence, real-time context fetching loops, and downstream compilation actions in real time:
+The **Enterprise AI Resume ATS Analyzer & Placement Hub** is an intelligent career-assistance platform designed to bridge the gap between job seekers and modern Applicant Tracking Systems (ATS).
 
+Traditional ATS platforms evaluate resumes through keyword matching, skill relevance, project alignment, and contextual similarity with job descriptions. This system reverse-engineers that workflow using a Retrieval-Augmented Generation (RAG) architecture to provide actionable insights and improve application success rates.
 
+The platform transforms unstructured resumes into structured career intelligence by:
 
+* Analyzing ATS compatibility
+* Identifying missing skills
+* Generating improvement recommendations
+* Producing interview preparation roadmaps
+* Creating tailored interview questions
+* Tracking candidate evaluations historically
+* Generating downloadable reports
 
-📸 Production-Ready Core Operational Showcases
-1
+---
+
+# 🎯 Key Features
+
+### 📄 ATS Resume Analysis
+
+* Resume parsing from PDF documents
+* ATS compatibility scoring
+* Job description matching
+* Keyword coverage analysis
+* Missing skill identification
+
+### 🔍 Semantic Search with FAISS
+
+* Dense vector embeddings
+* Context-aware similarity retrieval
+* Semantic resume-job matching
+* Local vector database indexing
+
+### 🤖 Multi-LLM Orchestration
+
+* Primary Engine: Gemini 2.5 Flash
+* Automatic Failover: Groq Llama 3.3
+* Structured JSON output validation
+* High availability response generation
+
+### 🎤 AI Interview Preparation
+
+* Technical interview questions
+* Behavioral interview questions
+* Project-specific interview drills
+* Personalized preparation plans
+
+### 📊 Candidate Analytics
+
+* Historical ATS score tracking
+* Resume analysis logs
+* Performance trend monitoring
+* Persistent storage using SQLite
+
+### 📑 Report Generation
+
+* ATS assessment reports
+* Downloadable PDF resumes
+* Career improvement summaries
+* Recruiter-friendly outputs
+
+---
+
+# 🏗️ System Architecture
+
+The platform follows a layered Retrieval-Augmented Generation (RAG) architecture that separates ingestion, retrieval, reasoning, and persistence components.
+
+```text
+[ Resume PDF ]                     [ Job Description ]
+       │                                   │
+       ▼                                   ▼
+
+┌─────────────────┐          ┌─────────────────┐
+│ PDF Extraction  │          │ Text Ingestion  │
+└────────┬────────┘          └────────┬────────┘
+         │                            │
+         ▼                            ▼
+
+     Raw Resume Text          Raw JD Content
+                │
+                ▼
+
+┌──────────────────────────────┐
+│ Sentence Transformer Model   │
+└──────────────┬───────────────┘
+               │
+               ▼
+
+      768-Dimensional Embeddings
+               │
+               ▼
+
+┌──────────────────────────────┐
+│      FAISS Vector Store      │
+└──────────────┬───────────────┘
+               │
+               ▼
+
+ Semantic Context Retrieval Layer
+               │
+               ▼
+
+┌────────────────────────────────────────────┐
+│ Multi-Agent Prompt Orchestration Engine    │
+└─────────────────┬──────────────────────────┘
+                  │
+       ┌──────────┴──────────┐
+       ▼                     ▼
+
+┌─────────────────┐   ┌─────────────────┐
+│ Gemini 2.5Flash │   │ Groq Llama 3.3  │
+│ Primary Engine  │   │ Failover Engine │
+└────────┬────────┘   └────────┬────────┘
+         └──────────┬──────────┘
+                    ▼
+
+      Structured JSON Responses
+                    │
+                    ▼
+
+┌───────────────────────────────────────────┐
+│               Application Layer           │
+└───────────────┬───────────────┬───────────┘
+                │               │
+
+                ▼               ▼
+
+      SQLite Database      ReportLab PDF
+      Historical Logs      Report Builder
+```
+
+---
+
+# 📸 Application Showcase
+
+## 1️⃣ Unified ATS Analysis Dashboard
+
+Upload resumes and job descriptions through a streamlined interface to receive real-time ATS insights and compatibility metrics.
+
 <img width="1917" height="876" alt="image" src="https://github.com/user-attachments/assets/da523293-684f-48a2-a0c2-5d1fbba0fc06" />
-2
+
+---
+
+## 2️⃣ AI Interview Preparation Workspace
+
+Generate technical, behavioral, and project-based interview questions tailored to the candidate profile.
+
 <img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/da864fa0-7283-44ec-b178-c383880b2997" />
-3
+
+---
+
+## 3️⃣ Historical Analytics & Tracking
+
+Monitor previous ATS evaluations and performance trends through a persistent database layer.
+
 <img width="1912" height="870" alt="image" src="https://github.com/user-attachments/assets/6cc8666a-bdda-443b-bbd3-65be13d9d9fd" />
 
+---
 
+# 🎥 Video Demonstration
 
-1. Unified Diagnostic Assessment Suite Workspace
-Dual-mode operational panel allowing seamless file drops or copy-paste text ingestion processing alongside real-time interactive Plotly matching gauges.
+Watch the complete workflow including:
 
-2. Contextual Interview Preparation & Microservice Triggers
-Schema-enforced interview simulation engines mapping custom technical drills, behavioral criteria, and project architectural reviews.
+* Resume ingestion
+* Semantic retrieval
+* ATS scoring
+* Interview generation
+* PDF report creation
+* Database logging
 
-3. Institutional Placement Analytics Log
-Permanent relational state retention engine logging analysis timestamps, transaction metrics, and score distributions via an isolated SQLite database layer.
+### Demo Video
 
+```text
+Insert YouTube / Drive Demo Link Here
+```
 
+---
 
-🗺️ System Architecture & Data Flow
-The platform separates data extraction, semantic search vector storage, and state preservation to optimize request-response latencies and secure strict data alignment boundaries:
+# 🧠 Core Technologies
 
+| Category               | Technology                 |
+| ---------------------- | -------------------------- |
+| Frontend               | Streamlit                  |
+| Programming Language   | Python                     |
+| Embedding Engine       | Sentence Transformers      |
+| Vector Database        | FAISS                      |
+| Primary LLM            | Gemini 2.5 Flash           |
+| Failover LLM           | Groq Llama 3.3             |
+| Database               | SQLite3                    |
+| PDF Processing         | PyPDF                      |
+| PDF Generation         | ReportLab                  |
+| Visualization          | Plotly                     |
+| Environment Management | Python Virtual Environment |
 
-[ Raw Candidate Profile PDF ]      [ Corporate Job Specification (PDF/Text) ]
-                   │                                        │
-                   ▼                                        ▼
-       ┌──────────────────────┐                  ┌──────────────────────┐
-       │   pypdf Extraction   │                  │  Ingestion Filter    │
-       └──────────┬───────────┘                  └──────────┬───────────┘
-                  │                                         │
-                  ▼ (Raw Text Payload Segment)              │
-       ┌──────────────────────┐                             │
-       │ sentence-transformers│                             │
-       └──────────┬───────────┘                             │
-                  │                                         │
-                  ▼ (768-Dim Spatial Embeddings)            │
-       ┌──────────────────────┐                             │
-       │   FAISS Vector DB    │                             │
-       └──────────┬───────────┘                             │
-                  │                                         │
-                  ▼ (Local Semantic Context Neighborhood)   │
-       ┌────────────────────────────────────────────────────┴───────────┐
-       │ Orchestration Layer, Multi-Agent Prompts & State Evaluators     │
-       └────────────────────────────┬───────────────────────────────────┘
-                                    │
-               ┌────────────────────┴────────────────────┐
-               ▼ (Primary Engine Attempt)                ▼ (On HTTP 503 Traffic Overload)
-    ┌───────────────────────────────┐        ┌───────────────────────────────┐
-    │       Gemini 2.5 Flash        │───────>│       Groq Llama 3.3          │
-    │  (Structured JSON Compliance) │        │   (High-Throughput Failover)  │
-    └──────────────┬────────────────┘        └──────────────┬────────────────┘
-                   │                                        │
-                   └───────────────────┬────────────────────┘
-                                       │
-                                       ▼ (Validated Structured Schema Payload)
-                   ┌───────────────────┴───────────────────┐
-                   │               App Layer               │
-                   └─┬───────────────────────────────────┬─┘
-                     │                                   │
-                     ▼ (Transactional Cache)             ▼ (Binary Stream Render)
-       ┌───────────────────────────┐       ┌───────────────────────────┐
-       │     SQLite3 Database      │       │  ReportLab PDF Compilers  │
-       │  [ CANDIDATE_ANALYSIS ]   │       │ [ Traditional Resumes ]   │
-       └───────────────────────────┘       └───────────────────────────┘
+---
 
+# 📊 Technical Concepts Demonstrated
 
+This project showcases practical implementation of:
 
+* Retrieval-Augmented Generation (RAG)
+* Semantic Search
+* Vector Databases
+* Dense Embeddings
+* Prompt Engineering
+* Multi-Agent Workflows
+* Structured LLM Outputs
+* AI Failover Systems
+* Database Persistence
+* Resume Parsing
+* ATS Optimization
+* Document Intelligence
+* Information Retrieval
+* Enterprise Application Design
 
-📂 Codebase Modular Layout
-{i will provide ss or line diagram}
+---
 
+# 📂 Project Structure
 
+```text
+AI-Resume-ATS-Analyzer-Assistance
+│
+├── app.py
+├── requirements.txt
+├── .env
+│
+├── database/
+│   ├── candidate_analysis.db
+│
+├── modules/
+│   ├── ats_analyzer.py
+│   ├── interview_generator.py
+│   ├── vector_store.py
+│   ├── report_generator.py
+│   ├── llm_orchestrator.py
+│
+├── assets/
+│   ├── dashboard.png
+│   ├── interview.png
+│   ├── analytics.png
+│
+├── generated_reports/
+│
+└── README.md
+```
 
+---
 
-💾 Institutional Relational Data Schema
-Candidate evaluation scores, match criteria, and audit histories are persistently stored inside a lightweight relational database schema managed locally:
+# 💾 Database Schema
 
-Table Specification: CANDIDATE_ANALYSIS
+Candidate analyses are stored locally using SQLite for auditability and historical tracking.
 
-https://docs.google.com/spreadsheets/d/1jT5eEfcrD5Lw29XSrxSca5Jl8gr9q9b0Y3UF8cdVMpE/edit?usp=sharing
+### Table: `CANDIDATE_ANALYSIS`
 
+| Field             | Type     |
+| ----------------- | -------- |
+| id                | INTEGER  |
+| candidate_name    | TEXT     |
+| ats_score         | REAL     |
+| skill_match_score | REAL     |
+| interview_score   | REAL     |
+| missing_skills    | TEXT     |
+| recommendations   | TEXT     |
+| timestamp         | DATETIME |
 
+### Dataset Reference
 
+Google Sheet:
 
+```text
+https://docs.google.com/spreadsheets/d/1jT5eEfcrD5Lw29XSrxSca5Jl8gr9q9b0Y3UF8cdVMpE
+```
 
-🚀 Rapid Local Deployment Guide
-1. Clone Repository & Target Workspace
-Open your system terminal, navigate to your development directory, and clone the assets:
+---
 
-Bash
-git clone [https://github.com/UpayanChatterjee/AI-Resume-ATS-Analyzer-Assistance.git](https://github.com/UpayanChatterjee/AI-Resume-ATS-Analyzer-Assistance.git)
+# ⚡ Installation Guide
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/UpayanChatterjee/AI-Resume-ATS-Analyzer-Assistance.git
+
 cd AI-Resume-ATS-Analyzer-Assistance
-2. Isolate and Spin Up Your Virtual Environment
-To prevent package version collision, construct a isolated sandbox environment using Python 3.10 or 3.11:
+```
 
-Bash
-# Initialize Environment
+---
+
+## 2. Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
 
-# Activate Environment (Windows Command Prompt Architecture)
 venv\Scripts\activate
+```
 
-# Activate Environment (macOS / Linux Shell Architecture)
+### Linux / macOS
+
+```bash
+python -m venv venv
+
 source venv/bin/activate
-3. Clean Batch Installation of Stack Requirements
-Run the mass dependency ingestion sequence directly from the production matrix mapping:
+```
 
-Bash
+---
+
+## 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4. Inject Environmental Variables
-Create an file named exactly .env in the root directory workspace and drop your authorization keys inside:
+```
 
-Code snippet
-GEMINI_API_KEY=AIzaSyYourSecretKeyStringHere
-GROQ_API_KEY=gsk_YourSecretGroqKeyStringHere
-5. Boot Up the Dashboard Web Portal
-Kickstart the local server container framework to spin up the interface:
+---
 
-Bash
+## 4. Configure Environment Variables
+
+Create a file named:
+
+```text
+.env
+```
+
+Add:
+
+```env
+GEMINI_API_KEY=<YOUR_GEMINI_API_KEY>
+
+GROQ_API_KEY=<YOUR_GROQ_API_KEY>
+```
+
+---
+
+## 5. Launch Application
+
+```bash
 streamlit run app.py
-🛡️ License Architecture
-Distributed under the MIT License. Check out the repository root documentation to read explicit liability exclusions and open engineering utilization clearances.
+```
 
+---
 
+# 🚀 Future Enhancements
+
+* Multi-resume batch analysis
+* Recruiter dashboard
+* PostgreSQL integration
+* Cloud deployment support
+* Resume ranking system
+* LinkedIn profile analysis
+* Fine-tuned ATS scoring model
+* LangGraph-based agent orchestration
+* Dockerized deployment
+* Kubernetes scalability support
+
+---
+
+# 📈 Impact
+
+This platform demonstrates how Retrieval-Augmented Generation can be leveraged to create intelligent career-assistance systems that go beyond keyword matching and provide meaningful, contextual guidance for candidates.
+
+The architecture combines semantic retrieval, structured reasoning, persistent analytics, and automated interview preparation into a unified ecosystem capable of supporting modern placement and recruitment workflows.
+
+---
+
+# 👨‍💻 Author
+
+### Upayan Chatterjee
+
+Aspiring Software Engineer | AI Enthusiast | Full-Stack Developer
+
+**Skills:**
+
+* Java
+* Spring Boot
+* Python
+* React
+* SQL
+* AI/ML
+* RAG Systems
+* Vector Databases
+* System Design
+
+GitHub:
+
+```text
+https://github.com/upayan0
+```
+
+---
+
+# 📜 License
+
+This project is distributed under the MIT License.
+
+Feel free to use, modify, and distribute the software in accordance with the license terms.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star.
+
+Building intelligent systems, one project at a time.
+
+</div>
