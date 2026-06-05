@@ -165,7 +165,7 @@ Upload resumes and job descriptions through a streamlined interface to receive r
 
 Generate technical, behavioral, and project-based interview questions tailored to the candidate profile.
 
-<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/da864fa0-7283-44ec-b178-c383880b2997" />
+<img width="1912" height="870" alt="image" src="https://github.com/user-attachments/assets/6cc8666a-bdda-443b-bbd3-65be13d9d9fd" />
 
 ---
 
@@ -173,7 +173,7 @@ Generate technical, behavioral, and project-based interview questions tailored t
 
 Monitor previous ATS evaluations and performance trends through a persistent database layer.
 
-<img width="1912" height="870" alt="image" src="https://github.com/user-attachments/assets/6cc8666a-bdda-443b-bbd3-65be13d9d9fd" />
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/da864fa0-7283-44ec-b178-c383880b2997" />
 
 ---
 
@@ -190,8 +190,8 @@ Watch the complete workflow including:
 
 ### Demo Video
 
-```text
-Insert YouTube / Drive Demo Link Here
+```
+
 ```
 
 ---
