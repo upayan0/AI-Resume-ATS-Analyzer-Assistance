@@ -25,6 +25,14 @@ https://github.com/UpayanChatterjee/AI-Resume-ATS-Analyzer-Assistance/assets/dem
 📂 To preview your live workspace video stream, record a short clip of your application in action, drag-and-drop the .mp4 into your GitHub repository root, and match its path reference to the link above.
 
 📸 Production-Ready Core Operational Showcases
+<img width="1917" height="876" alt="image" src="https://github.com/user-attachments/assets/da523293-684f-48a2-a0c2-5d1fbba0fc06" />
+
+<img width="1917" height="877" alt="image" src="https://github.com/user-attachments/assets/da864fa0-7283-44ec-b178-c383880b2997" />
+
+<img width="1912" height="870" alt="image" src="https://github.com/user-attachments/assets/6cc8666a-bdda-443b-bbd3-65be13d9d9fd" />
+
+
+
 1. Unified Diagnostic Assessment Suite Workspace
 Dual-mode operational panel allowing seamless file drops or copy-paste text ingestion processing alongside real-time interactive Plotly matching gauges.
 
